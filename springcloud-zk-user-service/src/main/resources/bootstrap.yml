@@ -1,5 +1,6 @@
-#http://cloud.spring.io/spring-cloud-static/Finchley.SR1/multi/multi_spring-cloud-zookeeper-config.html
-##connectString: 192.168.1.186:2181,192.168.1.187:2181,192.168.1.188:2181
+server:
+  port: 8392
+
 spring:
   cloud:
     zookeeper:
