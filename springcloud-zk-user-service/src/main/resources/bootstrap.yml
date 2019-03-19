@@ -26,4 +26,7 @@ spring:
       - 192.168.42.186:9092
       - 192.168.42.187:9092
       - 192.168.2.188:9092
-    
+---
+spring: 
+  application: 
+    name: user-service
