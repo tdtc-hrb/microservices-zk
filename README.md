@@ -24,4 +24,4 @@ ls /services
 
 ## Document
 * Distributed traceability with Spring Cloud: [Sleuth and Zipkin](https://www.cnblogs.com/xiaobin-hlj80/p/10052026.html)
-* Install and Configure Apache Kafka(https://www.cnblogs.com/xiaobin-hlj80/p/8998181.html)
+* [Install and Configure Apache Kafka](https://www.cnblogs.com/xiaobin-hlj80/p/8998181.html)
