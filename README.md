@@ -1,6 +1,6 @@
 # microservices-zk
 
-This is a distributed tracing based on ZK [V3.5.4-beta](http://zookeeper.apache.org/releases.html).
+This is a distributed tracing based on ZK [V3.5.5](http://zookeeper.apache.org/releases.html).
 
 ## ZK Run
 ```bash
