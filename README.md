@@ -25,6 +25,15 @@ ls /services
 
 ## Run
 
+### allow port
+- zk port    
+see [ops - firewall](https://tdtc-hrb.github.io/csdn/post/ops_firewall)
+- RabbitMq port    
+ubuntu:
+```bash
+sudo ufw allow 5672
+```
+
 ### server
 - CentOS    
 3 centos(v7.9) running zk(v3.6.3)
