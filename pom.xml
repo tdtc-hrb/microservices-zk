@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.tdtc</groupId>
   <artifactId>springcloud-zk</artifactId>
-  <version>0.1-SNAPSHOT</version>
+  <version>0.2-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>microservices-zk</name>
   <description>Zookeeper Discovery in Microservices</description>
@@ -11,6 +11,6 @@
   <modules>
   	<module>springcloud-zk-userDetails</module>
   	<module>springcloud-zk-user-service</module>
-    <module>gateway-zuul</module>
+    <module>springcloud-gateway-dev</module>
   </modules>
 </project>

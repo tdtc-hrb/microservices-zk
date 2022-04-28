@@ -1,6 +1,7 @@
-# microservices-zk
+microservices-zk
+===
 
-This is a distributed tracing based on ZK [V3.6.3](https://tdtc-hrb.github.io/csdn/post/ops_zookeeper/).
+This is a distributed tracing based on ZK.
 
 ## ZK Run
 ```bash
@@ -16,11 +17,11 @@ ls /services
 ```
 
 ## user service
-* user-service [springcloud-zk-user-service](https://github.com/xiaobin80/microservices-zk/tree/master/springcloud-zk-user-service)
-* userDetails [springcloud-zk-userDetails](https://github.com/xiaobin80/microservices-zk/tree/master/springcloud-zk-userDetails)
+* user-service [springcloud-zk-user-service](https://github.com/tdtc-hrb/microservices-zk/tree/master/springcloud-zk-user-service)
+* userDetails [springcloud-zk-userDetails](https://github.com/tdtc-hrb/microservices-zk/tree/master/springcloud-zk-userDetails)
 
 ## gate way
-* zuul [gateway-zuul](https://github.com/xiaobin80/microservices-zk/tree/master/gateway-zuul)
+* gateway [dev](https://github.com/tdtc-hrb/microservices-zk/tree/master/springcloud-gateway-dev)
 
 
 ## Run
@@ -36,35 +37,40 @@ sudo ufw allow 5672
 
 ### server
 - CentOS    
-3 centos(v7.9) running zk(v3.6.3)
+3 centos(v7.10) running zk([v3.6.3](https://tdtc-hrb.github.io/csdn/post/ops_zookeeper/))
 - Ubuntu    
-1 Ubuntu(v20.04) running MQ(RabbitMq v3.9.0/Erlang v24.0.4)
+1 Ubuntu(v20.04) running MQ(RabbitMq v3.9.x/Erlang v24.x)
 - WSL    
 1 WSL(v1) running Es(v2.4)
 
 ### app
 - gate way    
 ```bash
-java -jar gateway-0.1.1-SNAPSHOT.jar
+java -jar gateway-0.2.2-SNAPSHOT.jar
 ```
 - user service    
 ```bash
-java -jar user-service-0.1.1-SNAPSHOT.jar
+java -jar user-service-0.2.1-SNAPSHOT.jar
 ```
 - user details    
 ```bash
-java -jar userDetails-0.1.1-SNAPSHOT.jar
+java -jar userDetails-0.2.1-SNAPSHOT.jar
 ```
 - zipkin server    
 ```bash
-java -jar zipkin-server-2.12.9-exec.jar --RABBIT_URI=amqp://admin:admin@192.168.0.55:5672/sleuth --STORAGE_TYPE=elasticsearch --ES_HOSTS=192.168.0.95:9200 --ES_HTTP_LOGGING=BASIC
+java -jar zipkin-server-2.12.9-exec.jar --RABBIT_URI=amqp://admin:admin@192.168.3.40:5672/sleuth --STORAGE_TYPE=elasticsearch --ES_HOSTS=192.168.3.26:9200 --ES_HTTP_LOGGING=BASIC
 ```
 
 ### Broswer
-- [RabbitMq](http://192.168.0.55:15672/)
+- [RabbitMq](http://192.168.3.40:15672/)
 - [Es v2.4](http://localhost:9200/_plugin/elasticsearch-head/)
 - [list page](http://localhost:8311/user/listPage)
 
+
+## build
+```bash
+mvn clean package -DskipTests
+```
 
 ## Document
 * Distributed traceability with Spring Cloud: [Sleuth and Zipkin](https://tdtc-hrb.github.io/cnblogs/post/trace-zipkin-config)
