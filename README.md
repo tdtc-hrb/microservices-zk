@@ -39,30 +39,30 @@ sudo ufw allow 5672
 - CentOS    
 3 centos(v7.10) running zk([v3.6.3](https://tdtc-hrb.github.io/csdn/post/ops_zookeeper/))
 - Ubuntu    
-1 Ubuntu(v20.04) running MQ(RabbitMq v3.9.x/Erlang v24.x)
+1 Ubuntu(v20.04) running MQ(RabbitMq v3.10.x/Erlang v24.x)
 - WSL    
 1 WSL(v1) running Es(v2.4)
 
 ### app
 - gate way    
 ```bash
-java -jar gateway-0.2.2-SNAPSHOT.jar
+java -jar gateway-0.2.3-SNAPSHOT.jar
 ```
 - user service    
 ```bash
-java -jar user-service-0.2.1-SNAPSHOT.jar
+java -jar user-service-0.2.3-SNAPSHOT.jar
 ```
 - user details    
 ```bash
-java -jar userDetails-0.2.1-SNAPSHOT.jar
+java -jar userDetails-0.2.3-SNAPSHOT.jar
 ```
 - zipkin server    
 ```bash
-java -jar zipkin-server-2.12.9-exec.jar --RABBIT_URI=amqp://admin:admin@192.168.3.40:5672/sleuth --STORAGE_TYPE=elasticsearch --ES_HOSTS=192.168.3.26:9200 --ES_HTTP_LOGGING=BASIC
+java -jar zipkin-server-2.12.9-exec.jar --RABBIT_URI=amqp://admin:admin@192.168.3.50:5672/sleuth --STORAGE_TYPE=elasticsearch --ES_HOSTS=192.168.3.128:9200 --ES_HTTP_LOGGING=BASIC
 ```
 
 ### Broswer
-- [RabbitMq](http://192.168.3.40:15672/)
+- [RabbitMq](http://192.168.3.50:15672/)
 - [Es v2.4](http://localhost:9200/_plugin/elasticsearch-head/)
 - [list page](http://localhost:8311/user/listPage)
 
