@@ -6,7 +6,7 @@ spring:
     zookeeper:
       discovery:
          register: false
-      connectString: 192.168.3.127:2181,192.168.3.128:2181,192.168.3.129:2181
+      connectString: 192.168.3.107:2181,192.168.3.108:2181,192.168.3.109:2181
       
 ---
 spring: 
@@ -29,7 +29,7 @@ spring:
 ---
 spring:
   rabbitmq:
-    addresses: 192.168.3.40
+    addresses: 192.168.3.50
     port: 5672
     username: admin
     password: admin
