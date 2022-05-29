@@ -28,12 +28,11 @@ spring:
     
 ---
 spring:
-  rabbitmq:
-    addresses: 192.168.3.50
-    port: 5672
-    username: admin
-    password: admin
-    virtual-host: sleuth
+  kafka:
+    bootstrap-servers:
+      - 192.168.3.107:9092
+      - 192.168.3.108:9092
+      - 192.168.3.109:9092
     
 ---
 spring:
